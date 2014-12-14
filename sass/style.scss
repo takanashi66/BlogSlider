@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+@import "compass";
+@import "compass/reset";
+
+%cf{
+	zoom:1;
+	
+	&:before,
+	&:after {
+		content:"";
+		display:block;
+	}
+	 
+	&:after {
+	 	clear:both;
+	}
+}
+
+*{
+	@include box-sizing(border-box);
+}
+
+.blog_slider{
+	@extend %cf;
+	//width: 1000px;
+}
+
+.blog_slider_main{
+	width: 500px;
+	float: left;
+	padding:25px 100px;
+}
+
+.blog_slider_main_img{
+	width: 300px;
+	height: 300px;
+}
+
+.blog_slider_thumbnail{
+	@extend %cf;
+	width: 260px;
+	float: left;
+}
+
+#slider{
+	float: left;
+	margin: 10px;
+}
+
+img{
+	vertical-align: text-bottom;
+	padding: 5px;
+}
+
+.slide_thumbnail{
+	//表示させる(サムネイルの高さ + padding) * 表示する個数
+	height: (100 + 10px) * 3;
+	overflow: hidden;
+}
+
+#slider_reverse{
+	float: left;
+	margin: 10px;
+}
+
+.slide_thumbnail_reverse{
+	//表示させるサムネイルの高さ * 表示する個数
+	height: (100 + 10px) * 3;
+	overflow: hidden;
+}
+
+
